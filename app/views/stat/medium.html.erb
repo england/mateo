@@ -1,5 +1,18 @@
-<% @channels.each do |ch| %>
-    <%= ch.medium %>
-    <%= ch.visitors_count %>
-    <%= ch.arpu_sum %>
-<% end %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Medium</th>
+      <th>Product View Details</th>
+      <th>Product Revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @channels.each do |ch| %>
+      <tr>
+        <td><%= ch.medium %></td>
+        <td><%= ch.visitors_count %></td>
+        <td><%= ch.arpu_sum %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
