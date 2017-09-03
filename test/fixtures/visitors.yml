@@ -1,9 +1,16 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  medium: MyString
-  activity_id: 1
+  medium: email
+  activity: one
 
 two:
-  medium: MyString
-  activity_id: 1
+  medium: cpc
+  activity: one
+
+three:
+  medium: organic
+  activity: two
+
+four:
+  medium: organic
+  activity: two
+

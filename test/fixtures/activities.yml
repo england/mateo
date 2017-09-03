@@ -1,9 +1,7 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  title: MyString
-  arpu: 1
+  title: First Activity
+  arpu: 10
 
 two:
-  title: MyString
-  arpu: 1
+  title: Second Activity
+  arpu: 25
