@@ -6,6 +6,9 @@ class StatController < ApplicationController
   end
 
   def activity
+    @activities = Visitor.joins(:activity).group("activities.id")
+                    .select("title, sum(arpu) as arpu_sum, count(*) as visitors_count")
+                    .order("visitors_count desc")
   end
 
   def activity_medium

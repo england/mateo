@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Product Detail Views</th>
+      <th>Product Revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @activities.each do |ac| %>
+      <tr>
+        <td><%= ac.title %></td>
+        <td><%= ac.visitors_count %></td>
+        <td><%= ac.arpu_sum %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
