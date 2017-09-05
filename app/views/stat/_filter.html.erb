@@ -1,0 +1,6 @@
+<%= search_form_for @q, url: request.path  do |f| %>
+  <%= f.label :medium_eq %>
+  <%= f.select :medium_eq, Visitor::CHANNELS.map.each_with_index.to_a, { include_blank: true } %>
+
+  <%= f.submit %>
+<% end %>

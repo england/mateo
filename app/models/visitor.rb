@@ -1,5 +1,7 @@
 class Visitor < ApplicationRecord
-  enum medium: [:cpc, :organic, :affiliate, :email]
+  CHANNELS = [:cpc, :organic, :affiliate, :email]
+
+  enum medium: CHANNELS
 
   belongs_to :activity
 end
