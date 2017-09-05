@@ -2,5 +2,8 @@
   <%= f.label :medium_eq %>
   <%= f.select :medium_eq, Visitor::CHANNELS.map.each_with_index.to_a, { include_blank: true } %>
 
+  <%= f.label :activity_title_cont_any_of_string %>
+  <%= f.search_field :activity_title_cont_any_of_string %>
+
   <%= f.submit %>
 <% end %>
