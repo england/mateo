@@ -1,14 +1,14 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: :show
 
-  # GET /activities
-  # GET /activities.json
   def index
-    @activities = Activity.all
+    @activities = Activity.joins(:visitors)
+                    .select("title, count(*) as visitors_count")
+                    .group("activities.id")
+                    .order("visitors_count")
+                    .page(params[:page]).per(10)
   end
 
-  # GET /activities/1
-  # GET /activities/1.json
   def show
   end
 
