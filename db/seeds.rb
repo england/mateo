@@ -18,5 +18,5 @@ end
   else 1
   end
 
-  n.times { activities.sample.visitors.create medium: rand(0..3) }
+  n.times { activities.sample.visitors.create medium: rand(0..3), user_id: i }
 end

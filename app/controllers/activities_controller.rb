@@ -3,9 +3,9 @@ class ActivitiesController < ApplicationController
 
   def index
     @activities = Activity.joins(:visitors)
-                    .select("title, count(*) as visitors_count")
+                    .select("title, count(visitors.id) as visits_count")
                     .group("activities.id")
-                    .order("visitors_count")
+                    .order("visits_count, title")
                     .page(params[:page]).per(10)
   end
 

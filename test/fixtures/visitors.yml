@@ -1,16 +1,20 @@
 one:
   medium: email
   activity: one
+  user_id: 1
 
 two:
   medium: cpc
   activity: one
+  user_id: 1
 
 three:
   medium: organic
   activity: two
+  user_id: 2
 
 four:
   medium: organic
   activity: two
+  user_id: 2
 
